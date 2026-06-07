@@ -4,8 +4,9 @@
   --color-bg: #f6f5e3;
   --color-surface: #ebcda2;
   --color-text: #4c4641;
-  --color-text-muted: #8a7f75;
+  --color-text-muted: #6b6059;
   --color-accent: #6c9362;
+  --color-accent-label: #4f6b47;
   --color-accent-hover: #5a7d51;
   --color-border: rgba(76, 70, 65, 0.12);
 
@@ -110,6 +111,28 @@ h1, h2, h3, h4, h5, h6 {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+/* ─── Skip navigation ──────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 10px 20px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 8px 0;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--color-bg);
+  outline-offset: 2px;
 }
 
 /* ─── Selection ─────────────────────────────────────────────────────────── */
