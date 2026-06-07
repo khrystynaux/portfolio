@@ -1,0 +1,28 @@
+.footer {
+  background: var(--color-text);
+  padding: var(--space-8) 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(246, 245, 227, 0.5);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 var(--space-4);
+  }
+}

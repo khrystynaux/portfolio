@@ -1,0 +1,122 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  padding: 20px 20px 28px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 56px rgba(76, 70, 65, 0.22);
+}
+
+/* Background image */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s var(--ease-smooth);
+  z-index: 0;
+}
+
+.card:hover .bgImage {
+  transform: scale(1.04);
+}
+
+/* Gradient overlay — deepens on hover */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(30, 26, 20, 0.72) 0%,
+    rgba(30, 26, 20, 0.18) 50%,
+    rgba(30, 26, 20, 0.08) 100%
+  );
+  transition: opacity 0.35s var(--ease-smooth);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card:hover .overlay {
+  opacity: 1.4;
+}
+
+/* Category tag — top left */
+.category {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(246, 245, 227, 0.88);
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Bottom content block */
+.bottomContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Teaser — hidden by default, slides up on hover */
+.teaser {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(246, 245, 227, 0.82);
+  max-width: 38ch;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.28s var(--ease-smooth) 0.04s,
+    transform 0.28s var(--ease-smooth) 0.04s;
+}
+
+.card:hover .teaser {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Title */
+.title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #f6f5e3;
+  max-width: 480px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 280px;
+    padding: 16px 16px 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .teaser {
+    display: none;
+  }
+}

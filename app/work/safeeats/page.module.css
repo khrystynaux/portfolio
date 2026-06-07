@@ -1,0 +1,697 @@
+/* ── Shared ───────────────────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+.sectionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 680px;
+  overflow: hidden;
+  background: #2a2e24;
+}
+
+.heroImg {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(30, 28, 24, 0.45) 0%,
+    rgba(30, 28, 24, 0.08) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroNameplate {
+  position: absolute;
+  top: 332px;
+  left: 120px;
+  width: min(1200px, calc(100% - 48px));
+  background: rgba(246, 245, 227, 0.76);
+  border: 1px solid rgba(76, 70, 65, 0.1);
+  border-radius: 20px;
+  padding: 32px 24px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: normal;
+  color: #447138;
+}
+
+.heroSub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.heroMeta {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+/* ── Section backgrounds ──────────────────────────────────────────────────── */
+.sectionDefault {
+  background: var(--color-bg);
+  padding: var(--space-24) 0;
+}
+
+.sectionAlt {
+  background: var(--color-bg);
+  padding: var(--space-24) 0;
+}
+
+/* ── Summary / Meta ───────────────────────────────────────────────────────── */
+.metaRow {
+  display: flex;
+  gap: 16px;
+}
+
+.metaCard {
+  flex: 1;
+  background: rgba(235, 205, 162, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metaLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.metaValue {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.bodyText {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.bodyText strong {
+  font-weight: 700;
+}
+
+/* ── Research ─────────────────────────────────────────────────────────────── */
+.introText {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.introTextMuted {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.findingRow {
+  display: flex;
+  gap: 20px;
+}
+
+.findingCard {
+  flex: 1;
+  background: rgba(235, 205, 162, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.findingLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.findingText {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.cmaRow {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cmaFigure {
+  flex: 1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.cmaImgWrap {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cmaImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-align: center;
+  width: 100%;
+}
+
+.statsRow {
+  display: flex;
+  gap: 24px;
+}
+
+.statCard {
+  flex: 1;
+  background: rgba(235, 205, 162, 0.3);
+  border: 1px solid rgba(76, 70, 65, 0.12);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--color-accent);
+  line-height: normal;
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.statSource {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.66px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ── User Research ────────────────────────────────────────────────────────── */
+.sectionHeading40 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.sectionHeading40 em {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.painStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.painCard {
+  background: rgba(235, 205, 162, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.painTitle {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: normal;
+}
+
+.painBody {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.painImgGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+}
+
+.painImg {
+  width: 100%;
+  overflow: hidden;
+}
+
+.painImgNatural {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.coverImg {
+  object-fit: cover;
+}
+
+/* ── Personas ─────────────────────────────────────────────────────────────── */
+.personaRow {
+  display: flex;
+  gap: 24px;
+}
+
+.personaCard {
+  flex: 1;
+  background: #f0ece4;
+  border-radius: 8px;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.personaImgWrap {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #d1ceca;
+}
+
+.personaImgFit {
+  object-fit: contain;
+  object-position: top center;
+}
+
+.personaCaption {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: normal;
+}
+
+/* ── Problem Statement ────────────────────────────────────────────────────── */
+.problemSection {
+  background: #6c9362;
+  padding: var(--space-24) 0;
+}
+
+.labelOnGreen {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(246, 245, 227, 0.7);
+}
+
+.problemText {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #f6f5e3;
+}
+
+/* ── The Solution ─────────────────────────────────────────────────────────── */
+.solutionStep {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(76, 70, 65, 0.08);
+}
+
+.solutionStep:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.stepHeading {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-text);
+}
+
+.stepDesc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.solutionImg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* ── Responsive Design ────────────────────────────────────────────────────── */
+.deviceRow {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.deviceDesktopWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deviceDesktop {
+  position: relative;
+  width: 100%;
+  height: 569px;
+  overflow: hidden;
+}
+
+.deviceMobileWrap {
+  flex-shrink: 0;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deviceMobile {
+  position: relative;
+  width: 285px;
+  height: 617px;
+  overflow: hidden;
+}
+
+.deviceLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: normal;
+  color: var(--color-text-muted);
+}
+
+/* ── Usability Testing ────────────────────────────────────────────────────── */
+.testingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testingCard {
+  background: rgba(235, 205, 162, 0.3);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testingLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  line-height: normal;
+}
+
+.testingText {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.testingImg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* ── Next Steps ───────────────────────────────────────────────────────────── */
+.nextCards {
+  display: flex;
+  gap: 20px;
+}
+
+.nextCard {
+  flex: 1;
+  background: var(--color-bg);
+  border: 1px solid #dedbd6;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nextCardHeading {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: normal;
+}
+
+.nextCardBody {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ── Case Nav ─────────────────────────────────────────────────────────────── */
+.caseNav {
+  background: var(--color-text);
+  padding: var(--space-12) 0;
+}
+
+.caseNavInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.caseNavLink {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: rgba(246, 245, 227, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.caseNavLink:hover {
+  color: var(--color-bg);
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .heroNameplate {
+    left: 24px;
+    right: 24px;
+    width: auto;
+    top: 240px;
+  }
+
+  .heroTitle {
+    font-size: clamp(32px, 5vw, 56px);
+  }
+
+  .heroSub {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 520px;
+  }
+
+  .heroNameplate {
+    top: 180px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .heroTitle {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+
+  .sectionDefault,
+  .sectionAlt,
+  .problemSection {
+    padding: 64px 0;
+  }
+
+  .sectionInner {
+    gap: 32px;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .metaRow {
+    flex-direction: column;
+  }
+
+  .findingRow {
+    flex-direction: column;
+  }
+
+  .cmaRow {
+    flex-direction: column;
+  }
+
+  .cmaImgWrap {
+    height: 300px;
+  }
+
+  .statsRow {
+    flex-direction: column;
+  }
+
+  .sectionHeading40 {
+    font-size: 28px;
+  }
+
+  .statNum {
+    font-size: 40px;
+  }
+
+  .painImg {
+    height: 240px;
+  }
+
+  .painImgGroup {
+    gap: 32px;
+  }
+
+  .personaRow {
+    flex-direction: column;
+  }
+
+  .personaImgWrap {
+    height: 200px;
+  }
+
+  .solutionImg {
+    border-radius: var(--radius-md);
+  }
+
+  .deviceRow {
+    flex-direction: column;
+  }
+
+  .deviceDesktop {
+    height: 280px;
+  }
+
+  .deviceMobileWrap {
+    width: 180px;
+  }
+
+  .deviceMobile {
+    width: 180px;
+    height: 380px;
+  }
+
+  .nextCards {
+    flex-direction: column;
+  }
+
+  .caseNavInner {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
