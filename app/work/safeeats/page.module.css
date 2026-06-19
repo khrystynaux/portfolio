@@ -270,7 +270,7 @@
 
 /* ── User Research ────────────────────────────────────────────────────────── */
 .sectionHeading40 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 40px;
   font-weight: 300;
   letter-spacing: -0.03em;
@@ -279,8 +279,8 @@
 }
 
 .sectionHeading40 em {
-  font-style: italic;
-  color: var(--color-accent);
+  font-style: normal;
+  color: inherit;
 }
 
 .painStack {
@@ -388,7 +388,7 @@
 }
 
 .problemText {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 400;
   line-height: 1.35;
@@ -410,7 +410,7 @@
 }
 
 .stepHeading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 400;
   line-height: normal;

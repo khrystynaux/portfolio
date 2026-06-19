@@ -11,8 +11,9 @@
   --color-border: rgba(76, 70, 65, 0.12);
 
   /* Typography */
-  --font-display: var(--font-fraunces), Georgia, serif;
-  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-display: var(--font-arvo), Georgia, serif;
+  --font-heading: var(--font-nunito), system-ui, sans-serif;
+  --font-body: var(--font-libre-franklin), system-ui, sans-serif;
 
   /* Type scale */
   --text-xs: 0.75rem;
@@ -100,10 +101,21 @@ svg {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: var(--font-display);
   line-height: 1.15;
   color: var(--color-text);
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  font-style: normal;
+  color: inherit;
 }
 
 /* ─── Focus visible ─────────────────────────────────────────────────────── */

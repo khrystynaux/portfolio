@@ -63,9 +63,8 @@
 }
 
 .name em {
-  font-style: italic;
-  color: var(--color-accent);
-  font-weight: 400;
+  font-style: normal;
+  color: inherit;
 }
 
 /* ── Mobile ───────────────────────────────────────────────────────────────── */

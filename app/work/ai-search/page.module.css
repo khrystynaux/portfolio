@@ -25,7 +25,7 @@
 }
 
 .sectionHeading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 40px;
   font-weight: 300;
   letter-spacing: -0.03em;
@@ -35,8 +35,8 @@
 }
 
 .sectionHeading em {
-  font-style: italic;
-  color: var(--color-accent);
+  font-style: normal;
+  color: inherit;
 }
 
 .sectionIntro {
@@ -49,7 +49,7 @@
 }
 
 .featureHeading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: 300;
   letter-spacing: -0.02em;
@@ -174,7 +174,7 @@
 }
 
 .quoteText {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: clamp(var(--text-xl), 2.2vw, var(--text-2xl));
   font-style: italic;
   font-weight: 300;
@@ -202,7 +202,7 @@
 }
 
 .narrativeSubheading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: 300;
   letter-spacing: -0.02em;
@@ -325,7 +325,7 @@
 }
 
 .goalHeading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -556,7 +556,7 @@
 }
 
 .nextHeading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 40px;
   font-weight: 300;
   letter-spacing: -0.02em;
@@ -643,7 +643,7 @@
 }
 
 .caseNavTitle {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: 300;
   letter-spacing: -0.02em;
