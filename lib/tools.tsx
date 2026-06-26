@@ -1,5 +1,4 @@
 import { SiFigma, SiMaze, SiAnthropic, SiGithub } from "react-icons/si";
-import { TbBrandAdobeXd } from "react-icons/tb";
 import { VscAzureDevops } from "react-icons/vsc";
 import type { IconType } from "react-icons";
 import type { JSX } from "react";
@@ -33,7 +32,7 @@ export interface Tool {
 export const tools: Tool[] = [
   // Design
   { id: "figma",       name: "Figma",        category: "Design",         Icon: SiFigma,           iconStyle: "fill"   },
-  { id: "adobexd",     name: "Adobe XD",     category: "Design",         Icon: TbBrandAdobeXd,    iconStyle: "stroke" },
+  { id: "claude-ai",   name: "Claude Design", category: "Design",         Icon: SiAnthropic,       iconStyle: "fill"   },
   // Research
   { id: "maze",        name: "Maze",          category: "Research",       Icon: SiMaze,            iconStyle: "fill"   },
   // Development & AI

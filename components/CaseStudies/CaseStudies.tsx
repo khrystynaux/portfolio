@@ -17,7 +17,7 @@ export default function CaseStudies() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
         >
-          Selected Work
+          UX Case Studies
         </motion.h2>
 
         <div className={styles.grid}>

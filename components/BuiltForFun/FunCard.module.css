@@ -1,0 +1,161 @@
+.card {
+  position: relative;
+  width: 360px;
+  height: 310px;
+  border-radius: 28px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+/* ── Background image fills the card ─────────────────────────── */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.55s cubic-bezier(0.25, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.card:hover .bgImage {
+  transform: scale(1.05);
+}
+
+/* ── Always-visible badge ─────────────────────────────────────── */
+.liveBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(246, 245, 227, 0.95);
+  background: rgba(30, 26, 20, 0.5);
+  border: 1px solid rgba(246, 245, 227, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 10px 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8fc886;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Hover overlay ────────────────────────────────────────────── */
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 5, 2, 0.97) 0%, rgba(10, 5, 2, 0.75) 50%, rgba(10, 5, 2, 0) 75%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card:hover .hoverOverlay {
+  opacity: 1;
+}
+
+/* ── Hover content ────────────────────────────────────────────── */
+.hoverContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px 28px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.25, 0, 0.2, 1) 0.04s,
+              opacity 0.35s ease 0.04s;
+  pointer-events: none;
+}
+
+.card:hover .hoverContent {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.category {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(246, 245, 227, 0.7);
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #f6f5e3;
+}
+
+.teaser {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #f6f5e3;
+}
+
+.cta {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(30, 26, 20, 0.9);
+  background: rgba(246, 245, 227, 0.92);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+  margin-top: 4px;
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+  }
+
+  .hoverContent {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .hoverOverlay {
+    opacity: 1;
+  }
+}

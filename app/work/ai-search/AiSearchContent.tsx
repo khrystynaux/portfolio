@@ -22,32 +22,27 @@ export default function AiSearchContent() {
 
         {/* ── 01 Hero ───────────────────────────────────────────────────────── */}
         <section className={styles.hero}>
-          <div className={styles.heroCover}>
-            <Image
-              src="/images/ai-search/hero.png"
-              alt="Magnifying glass in an autumn forest — AI Search case study"
-              fill
-              className={styles.heroImg}
-              priority
-            />
-          </div>
-          <div className={styles.heroOverlay} />
           <motion.div
             className={styles.heroContent}
             variants={wakeUpContainer}
             initial="hidden"
             animate="visible"
           >
-            <motion.h1 className={styles.heroTitle} variants={fadeUp}>
-              Complex Search Made Easy
-            </motion.h1>
-            <motion.div className={styles.heroSubGroup} variants={fadeUp}>
-              <p className={styles.heroSub}>
-                A redesign of a classic query builder — enhanced with AI — to
-                make complex data searches accessible to everyone.
-              </p>
-              <p className={styles.heroMeta}>case study completed in 2024</p>
-            </motion.div>
+            <motion.span className={styles.heroPill} variants={fadeUp}>
+              AI · Enterprise SaaS
+            </motion.span>
+            <div className={styles.heroTextGroup}>
+              <motion.h1 className={styles.heroTitle} variants={fadeUp}>
+                Complex Search Made Easy
+              </motion.h1>
+              <motion.div className={styles.heroSubGroup} variants={fadeUp}>
+                <p className={styles.heroSub}>
+                  A redesign of a classic query builder — enhanced with AI — to
+                  make complex data searches accessible to everyone.
+                </p>
+                <p className={styles.heroMeta}>case study completed in 2024</p>
+              </motion.div>
+            </div>
           </motion.div>
         </section>
 

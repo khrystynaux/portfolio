@@ -22,20 +22,15 @@ export default function SafeEatsContent() {
 
         {/* ── 01 Hero ───────────────────────────────────────────────────────── */}
         <section className={styles.hero}>
-          <Image
-            src="/images/safeeats/hero.png"
-            alt="Grocery bag full of fresh vegetables on a sunlit forest path"
-            fill
-            className={styles.heroImg}
-            priority
-          />
-          <div className={styles.heroOverlay} />
           <motion.div
             className={styles.heroNameplate}
             variants={wakeUpContainer}
             initial="hidden"
             animate="visible"
           >
+            <motion.span className={styles.heroPill} variants={fadeUp}>
+              Consumer · User Research
+            </motion.span>
             <div className={styles.heroContent}>
               <motion.h1 className={styles.heroTitle} variants={fadeUp}>
                 User Awareness Where It Matters the Most

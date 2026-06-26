@@ -32,33 +32,35 @@
   transform: scale(1.04);
 }
 
-/* Gradient overlay — deepens on hover */
+/* Gradient overlay — left dark zone protects text, fades toward mockup */
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(30, 26, 20, 0.72) 0%,
-    rgba(30, 26, 20, 0.18) 50%,
-    rgba(30, 26, 20, 0.08) 100%
-  );
+  background:
+    linear-gradient(to right, rgba(30, 26, 20, 0.88) 0%, rgba(30, 26, 20, 0.65) 42%, rgba(30, 26, 20, 0.1) 62%, rgba(30, 26, 20, 0) 72%),
+    linear-gradient(to top,   rgba(30, 26, 20, 0.65) 0%, rgba(30, 26, 20, 0) 40%);
   transition: opacity 0.35s var(--ease-smooth);
   z-index: 1;
   pointer-events: none;
-}
-
-.card:hover .overlay {
-  opacity: 1.4;
 }
 
 /* Category tag — top left */
 .category {
   position: relative;
   z-index: 2;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  color: rgba(246, 245, 227, 0.88);
+  color: rgba(246, 245, 227, 0.9);
+  background: rgba(30, 26, 20, 0.45);
+  border: 1px solid rgba(246, 245, 227, 0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
   white-space: nowrap;
 }
 
@@ -83,7 +85,7 @@
   font-size: 14px;
   line-height: 1.55;
   color: rgba(246, 245, 227, 0.82);
-  max-width: 38ch;
+  max-width: 22ch;
   opacity: 0;
   transform: translateY(6px);
   transition:
@@ -103,7 +105,7 @@
   font-weight: 400;
   line-height: 1.2;
   color: #f6f5e3;
-  max-width: 480px;
+  max-width: 220px;
 }
 
 @media (max-width: 768px) {
