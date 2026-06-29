@@ -15,7 +15,7 @@ export const caseStudies: CaseStudy[] = [
     id: "ai-search",
     title: "Complex Search Made Easy",
     cardTitle: "Complex Search Made Easy",
-    category: "AI · Enterprise SaaS",
+    category: "AI · Search UX",
     teaser: "Simplifying complex query building with an AI-powered search experience.",
     slug: "/work/ai-search",
     status: "published",

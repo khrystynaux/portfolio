@@ -21,9 +21,11 @@ export default function BuiltForFun() {
           <span className={styles.subtitle}>Side projects & experiments</span>
         </motion.div>
 
-        {funProjects.map((project, i) => (
-          <FunCard key={project.id} project={project} index={i} />
-        ))}
+        <div className={styles.cards}>
+          {funProjects.map((project, i) => (
+            <FunCard key={project.id} project={project} index={i} />
+          ))}
+        </div>
 
       </div>
     </section>

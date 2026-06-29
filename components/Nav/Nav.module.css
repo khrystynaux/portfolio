@@ -167,6 +167,22 @@
   color: var(--color-accent);
 }
 
+.dropdownLabel {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: 6px 12px 2px;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 6px 0;
+}
+
 @media (max-width: 600px) {
   .inner {
     padding: 0 var(--space-4);

@@ -2,12 +2,18 @@
   position: relative;
   width: 360px;
   height: 310px;
+  flex-shrink: 0;
   border-radius: 28px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   display: block;
   cursor: pointer;
+}
+
+.wide {
+  flex: 1;
+  width: auto;
 }
 
 /* ── Background image fills the card ─────────────────────────── */
@@ -144,8 +150,10 @@
 }
 
 @media (max-width: 768px) {
-  .card {
+  .card,
+  .wide {
     width: 100%;
+    flex: none;
     height: 240px;
     border-radius: 20px;
   }

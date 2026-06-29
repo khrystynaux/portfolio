@@ -10,15 +10,16 @@ export default function CaseStudies() {
     <section id="work" className={styles.section} aria-label="Selected work">
       <div className={styles.inner}>
 
-        <motion.h2
-          className={styles.heading}
+        <motion.div
+          className={styles.header}
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
         >
-          UX Case Studies
-        </motion.h2>
+          <h2 className={styles.heading}>UX Case Studies</h2>
+          <span className={styles.subtitle}>Exploring user problems through research, ideation, and iterative design</span>
+        </motion.div>
 
         <div className={styles.grid}>
           {caseStudies.map((study, i) => (

@@ -5,8 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Nav.module.css";
 
 const caseStudyLinks = [
-  { label: "Complex Search Made Easy", href: "/work/ai-search" },
-  { label: "User Awareness Where It Matters the Most", href: "/work/safeeats" },
+  { label: "Complex Search Made Easy", href: "/work/ai-search", external: false },
+  { label: "User Awareness Where It Matters the Most", href: "/work/safeeats", external: false },
+];
+
+const funLinks = [
+  { label: "Stampbook", href: "https://stampbook-rho.vercel.app/", external: true },
+  { label: "Where to Eat?", href: "https://where-to-eat-nu.vercel.app/", external: true },
 ];
 
 export default function Nav() {
@@ -88,6 +93,7 @@ export default function Nav() {
                     exit={{ opacity: 0, y: -6, scale: 0.98 }}
                     transition={{ duration: 0.18, ease: [0, 0, 0.2, 1] }}
                   >
+                    <li role="none" className={styles.dropdownLabel}>UX Case Studies</li>
                     {caseStudyLinks.map((cs) => (
                       <li key={cs.href} role="none">
                         <a
@@ -97,6 +103,22 @@ export default function Nav() {
                           onClick={() => setWorkOpen(false)}
                         >
                           {cs.label}
+                        </a>
+                      </li>
+                    ))}
+                    <li role="none" className={styles.dropdownDivider} aria-hidden="true" />
+                    <li role="none" className={styles.dropdownLabel}>Built for Fun</li>
+                    {funLinks.map((fl) => (
+                      <li key={fl.href} role="none">
+                        <a
+                          href={fl.href}
+                          className={styles.dropdownItem}
+                          role="menuitem"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setWorkOpen(false)}
+                        >
+                          {fl.label}
                         </a>
                       </li>
                     ))}

@@ -6,6 +6,7 @@ export interface FunProject {
   url: string;
   bgColor: string;
   thumbnail?: string;
+  wide?: boolean;
 }
 
 export const funProjects: FunProject[] = [
@@ -18,5 +19,16 @@ export const funProjects: FunProject[] = [
     url: "https://where-to-eat-nu.vercel.app/",
     bgColor: "#1e100a",
     thumbnail: "/images/where-to-eat-thumb.png",
+  },
+  {
+    id: "stampbook",
+    cardTitle: "Stampbook",
+    category: "Responsive Web App · Built with React",
+    teaser:
+      "Explore cities, complete real-world photo quests, and collect stamps of your adventures.",
+    url: "https://stampbook-rho.vercel.app/",
+    bgColor: "#1a1e10",
+    thumbnail: "/images/stampbook-thumb.png",
+    wide: true,
   },
 ];

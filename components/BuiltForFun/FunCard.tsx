@@ -15,7 +15,7 @@ export default function FunCard({ project, index }: Props) {
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={styles.card}
+      className={`${styles.card}${project.wide ? ` ${styles.wide}` : ""}`}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
