@@ -15,7 +15,7 @@ export const funProjects: FunProject[] = [
     cardTitle: "Where to Eat?",
     category: "Interactive App · Built with React",
     teaser:
-      "A restaurant bracket game — pick your city, cuisine & budget, then swipe through 8 restaurants to settle tonight's dinner debate.",
+      "A bracket-style game that settles the age-old dinner debate — where to eat tonight?",
     url: "https://where-to-eat-nu.vercel.app/",
     bgColor: "#1e100a",
     thumbnail: "/images/where-to-eat-thumb.png",
@@ -25,7 +25,7 @@ export const funProjects: FunProject[] = [
     cardTitle: "Stampbook",
     category: "Responsive Web App · Built with React",
     teaser:
-      "Explore cities, complete real-world photo quests, and collect stamps of your adventures.",
+      "Animal Crossing–inspired web app that allows players to explore cities, complete real-world photo quests, and collect stamps of your adventures.",
     url: "https://stampbook-rho.vercel.app/",
     bgColor: "#1a1e10",
     thumbnail: "/images/stampbook-thumb.png",
