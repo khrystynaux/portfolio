@@ -25,7 +25,7 @@ export const funProjects: FunProject[] = [
     cardTitle: "Stampbook",
     category: "Responsive Web App · Built with React",
     teaser:
-      "Animal Crossing–inspired travel website allowing players to explore cities and complete real-world photo quests to collect adventure stamps.",
+      "Animal Crossing–inspired travel website for players to explore cities, take photos and collect activity stamps.",
     url: "https://stampbook-rho.vercel.app/",
     bgColor: "#1a1e10",
     thumbnail: "/images/stampbook-thumb.png",
