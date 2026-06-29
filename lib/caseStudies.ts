@@ -27,7 +27,7 @@ export const caseStudies: CaseStudy[] = [
     title: "SafeEats",
     cardTitle: "User Awareness Where It Matters the Most",
     category: "Consumer · User Research",
-    teaser: "A responsive food recall platform built on user research and iterative testing.",
+    teaser: "Responsive food recall platform built based on user research and iterative testing.",
     slug: "/work/safeeats",
     status: "published",
     bgColor: "#8c9e87",
