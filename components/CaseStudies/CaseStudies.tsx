@@ -17,7 +17,7 @@ export default function CaseStudies() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
         >
-          <h2 className={styles.heading}>UX Case Studies</h2>
+          <h2 className={styles.heading}>Case Studies</h2>
           <span className={styles.subtitle}>Exploring user problems through research, ideation, and iterative design</span>
         </motion.div>
 

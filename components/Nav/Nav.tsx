@@ -93,7 +93,7 @@ export default function Nav() {
                     exit={{ opacity: 0, y: -6, scale: 0.98 }}
                     transition={{ duration: 0.18, ease: [0, 0, 0.2, 1] }}
                   >
-                    <li role="none" className={styles.dropdownLabel}>UX Case Studies</li>
+                    <li role="none" className={styles.dropdownLabel}>Case Studies</li>
                     {caseStudyLinks.map((cs) => (
                       <li key={cs.href} role="none">
                         <a
