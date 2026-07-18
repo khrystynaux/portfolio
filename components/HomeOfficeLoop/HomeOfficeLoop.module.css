@@ -1,0 +1,39 @@
+.sceneWrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1407px;
+  height: 768px;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: center center;
+}
+
+.base {
+  position: absolute;
+  inset: 0;
+  width: 1407px;
+  height: 768px;
+  display: block;
+}
+
+.shimmer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.mote {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 248, 225, 0.95);
+  filter: blur(0.4px);
+  pointer-events: none;
+}

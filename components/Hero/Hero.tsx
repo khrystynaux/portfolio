@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animation";
+import HomeOfficeLoop from "@/components/HomeOfficeLoop/HomeOfficeLoop";
 import styles from "./Hero.module.css";
 
 const item = fadeUp;
@@ -26,12 +27,10 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1], delay: 0.05 }}
       >
-        <img
-          src="/images/hero-bg.png"
-          alt="A cozy home office with warm light, botanical prints, a wooden desk with a monitor, and an orange tabby cat sleeping on the floor"
-          className={styles.bgImage}
-          draggable={false}
-        />
+        <HomeOfficeLoop />
+        <span className={styles.srOnly}>
+          A cozy home office with warm light, botanical prints, a wooden desk with a monitor, and an orange tabby cat sleeping on the floor
+        </span>
       </motion.div>
 
       <motion.div
