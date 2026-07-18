@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Nav.module.css";
 
 const caseStudyLinks = [
+  { label: "Creating More Space for UX Thinking Using AI", href: "/work/ai-workflow", external: false },
   { label: "Complex Search Made Easy", href: "/work/ai-search", external: false },
   { label: "User Awareness Where It Matters the Most", href: "/work/safeeats", external: false },
 ];

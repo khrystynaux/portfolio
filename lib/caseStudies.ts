@@ -12,6 +12,17 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: "ai-workflow",
+    title: "Creating More Space for UX Thinking Using AI",
+    cardTitle: "Creating More Space for UX Thinking Using AI",
+    category: "AI · Process Design",
+    teaser: "How I turned scattered AI experiments into a reusable design methodology my whole workflow now runs on.",
+    slug: "/work/ai-workflow",
+    status: "published",
+    bgColor: "#1a1929",
+    thumbnail: "/images/ai-workflow-thumb.png",
+  },
+  {
     id: "ai-search",
     title: "Complex Search Made Easy",
     cardTitle: "Complex Search Made Easy",
