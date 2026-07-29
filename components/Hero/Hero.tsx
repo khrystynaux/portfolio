@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animation";
-import HomeOfficeLoop from "@/components/HomeOfficeLoop/HomeOfficeLoop";
+import HeroBackground from "./HeroBackground";
 import styles from "./Hero.module.css";
 
 const item = fadeUp;
@@ -12,7 +12,7 @@ const container = {
   visible: {
     transition: {
       staggerChildren: 0.14,
-      delayChildren: 0.72,
+      delayChildren: 0.3,
     },
   },
 };
@@ -20,24 +20,14 @@ const container = {
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero} aria-label="Introduction">
-
-      <motion.div
-        className={styles.imageWrapper}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1], delay: 0.05 }}
-      >
-        <HomeOfficeLoop />
-        <span className={styles.srOnly}>
-          A cozy home office with warm light, botanical prints, a wooden desk with a monitor, and an orange tabby cat sleeping on the floor
-        </span>
-      </motion.div>
+      <HeroBackground />
 
       <motion.div
         className={styles.nameplate}
         variants={container}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.4 }}
       >
         <motion.p variants={item} className={styles.eyebrow}>
           Senior Product Designer
@@ -47,7 +37,6 @@ export default function Hero() {
           Khrystyna <em>Arnoldy</em>
         </motion.h1>
       </motion.div>
-
     </section>
   );
 }

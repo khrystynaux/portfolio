@@ -4,10 +4,22 @@
   overflow: hidden;
 }
 
-/* ── Background image ─────────────────────────────────────────────────────── */
-.imageWrapper {
+/* ── Video background ─────────────────────────────────────────────────────── */
+.background {
   position: absolute;
   inset: 0;
+}
+
+.videoLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .srOnly {
@@ -22,18 +34,32 @@
   border: 0;
 }
 
-/* ── Frosted glass nameplate — absolutely positioned ─────────────────────── */
+/* Gradient scrim — keeps the corner caption and nameplate legible over
+   bright sky or water regardless of which clip is playing. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(20, 18, 15, 0.45) 0%, rgba(20, 18, 15, 0) 30%),
+    linear-gradient(to bottom, rgba(20, 18, 15, 0.28) 0%, rgba(20, 18, 15, 0) 22%);
+  pointer-events: none;
+}
+
+/* ── Frosted glass nameplate — centered over the footage ─────────────────── */
 .nameplate {
   position: absolute;
-  left: 120px;
-  top: 320px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
 
-  padding: 40px 32px;
+  padding: 40px 56px;
+  text-align: center;
 
   background: rgba(246, 245, 227, 0.86);
   backdrop-filter: blur(18px) saturate(1.4);
@@ -69,6 +95,75 @@
   color: inherit;
 }
 
+/* ── Location control — bottom right ─────────────────────────────────────── */
+.locationControl {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.locationLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  padding: 10px 20px;
+  white-space: nowrap;
+
+  background: rgba(20, 18, 15, 0.32);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-md);
+}
+
+.locationName {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.locationYear {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.locationArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  font-size: 18px;
+  line-height: 1;
+  color: #ffffff;
+
+  background: rgba(20, 18, 15, 0.32);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.locationArrow:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateX(2px);
+}
+
 /* ── Mobile ───────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero {
@@ -79,14 +174,39 @@
   .nameplate {
     left: 16px;
     right: 16px;
-    top: auto;
-    bottom: 40px;
-    padding: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 28px 24px;
     gap: 8px;
   }
 
   .name {
     font-size: clamp(36px, 10vw, 52px);
     white-space: normal;
+  }
+
+  .locationControl {
+    right: 16px;
+    bottom: 20px;
+    gap: 8px;
+  }
+
+  .locationLabel {
+    padding: 8px 14px;
+  }
+
+  .locationName {
+    font-size: 12px;
+  }
+
+  .locationYear {
+    font-size: 10px;
+  }
+
+  .locationArrow {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
   }
 }

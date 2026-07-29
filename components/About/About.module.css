@@ -8,17 +8,50 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-8);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
 }
 
-/* ── Text content ─────────────────────────────────────────────────────────── */
+/* ── Card — photo fills it, text overlays on top (desktop) ───────────────── */
+.card {
+  position: relative;
+  aspect-ratio: 2267 / 1345;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.illustration {
+  object-fit: cover;
+}
+
+/* ── Text content — frosted card, left of the subject ─────────────────────── */
 .content {
+  position: absolute;
+  left: var(--space-10);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+
+  max-width: min(500px, 44%);
+  padding: 32px;
+
+  background: rgba(246, 245, 227, 0.86);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(76, 70, 65, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.6) inset,
+    0 12px 40px rgba(76, 70, 65, 0.14);
 }
 
 .heading {
@@ -70,33 +103,40 @@
   transform: translateY(0);
 }
 
-/* ── Illustration ─────────────────────────────────────────────────────────── */
-.imageWrapper {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  align-self: start;
-}
-
-.illustration {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ── Mobile ───────────────────────────────────────────────────────────────── */
+/* ── Mobile — stacked, no overlay ─────────────────────────────────────────── */
 @media (max-width: 768px) {
   .section {
     padding: var(--space-16) 0;
   }
 
   .inner {
-    grid-template-columns: 1fr;
     padding: 0 var(--space-4);
-    gap: var(--space-10);
+  }
+
+  .card {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
   }
 
   .imageWrapper {
-    order: -1;
+    position: relative;
+    inset: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .content {
+    position: static;
+    transform: none;
+    z-index: auto;
+    max-width: none;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
   }
 
   .heading {
