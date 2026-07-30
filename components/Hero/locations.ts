@@ -10,6 +10,15 @@ export interface HeroLocation {
 
 export const HERO_LOCATIONS: HeroLocation[] = [
   {
+    id: "cozumel",
+    label: "Cozumel, Mexico",
+    year: "2021",
+    video: "/videos/hero/cozumel.mp4",
+    videoMobile: "/videos/hero/cozumel-mobile.mp4",
+    poster: "/images/hero/cozumel-poster.jpg",
+    alt: "Aerial drone footage along a turquoise coastal road in Cozumel, Mexico",
+  },
+  {
     id: "wisconsin",
     label: "Maiden Rock Bluff, WI",
     year: "2021",
@@ -53,15 +62,6 @@ export const HERO_LOCATIONS: HeroLocation[] = [
     videoMobile: "/videos/hero/playadelcarmen-mobile.mp4",
     poster: "/images/hero/playadelcarmen-poster.jpg",
     alt: "Aerial drone footage over a turquoise coastline, dissolving into a rocky cove, in Playa del Carmen, Mexico",
-  },
-  {
-    id: "cozumel",
-    label: "Cozumel, Mexico",
-    year: "2021",
-    video: "/videos/hero/cozumel.mp4",
-    videoMobile: "/videos/hero/cozumel-mobile.mp4",
-    poster: "/images/hero/cozumel-poster.jpg",
-    alt: "Aerial drone footage along a turquoise coastal road in Cozumel, Mexico",
   },
   {
     id: "kyiv",
