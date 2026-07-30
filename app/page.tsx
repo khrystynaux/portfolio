@@ -4,6 +4,7 @@ import CaseStudies from "@/components/CaseStudies/CaseStudies";
 import BuiltForFun from "@/components/BuiltForFun/BuiltForFun";
 import Tools from "@/components/Tools/Tools";
 import About from "@/components/About/About";
+import Recommendations from "@/components/Recommendations/Recommendations";
 import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <BuiltForFun />
         <Tools />
         <About />
+        <Recommendations />
       </main>
       <Footer />
     </>
