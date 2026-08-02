@@ -24,7 +24,7 @@ const libreFranklin = Libre_Franklin({
 export const metadata: Metadata = {
   title: "Khrystyna Arnoldy — UX/Product Designer",
   description:
-    "Lead UX/UI Designer specializing in B2B SaaS. Designing for clarity, from first research question to shipped product.",
+    "Senior Product Designer specializing in B2B SaaS. Designing for clarity, from first research question to shipped product.",
 };
 
 export default function RootLayout({
