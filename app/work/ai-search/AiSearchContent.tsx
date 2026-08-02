@@ -22,19 +22,18 @@ export default function AiSearchContent() {
 
         {/* ── 01 Hero ───────────────────────────────────────────────────────── */}
         <section className={styles.hero}>
-          <motion.div
-            className={styles.heroContent}
-            variants={wakeUpContainer}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.span className={styles.heroPill} variants={fadeUp}>
-              AI · Enterprise SaaS
-            </motion.span>
-            <div className={styles.heroTextGroup}>
-              <motion.h1 className={styles.heroTitle} variants={fadeUp}>
-                Complex Search Made Easy
-              </motion.h1>
+          <motion.div variants={wakeUpContainer} initial="hidden" animate="visible">
+            <div className={styles.heroTitleBar}>
+              <div className={styles.heroTitleBarInner}>
+                <motion.span className={styles.heroPill} variants={fadeUp}>
+                  AI · Enterprise SaaS
+                </motion.span>
+                <motion.h1 className={styles.heroTitle} variants={fadeUp}>
+                  Complex Search Made Easy
+                </motion.h1>
+              </div>
+            </div>
+            <div className={styles.heroContent}>
               <motion.div className={styles.heroSubGroup} variants={fadeUp}>
                 <p className={styles.heroSub}>
                   A redesign of a classic query builder — enhanced with AI — to
@@ -483,7 +482,7 @@ export default function AiSearchContent() {
               </Link>
               <Link href="/work/safeeats" className={styles.caseNavNext}>
                 <span className={styles.caseNavDir}>Next case study</span>
-                <span className={styles.caseNavTitle}>User Awareness Where It Matters the Most →</span>
+                <span className={styles.caseNavTitle}>Awareness Where It Matters Most →</span>
               </Link>
             </div>
           </div>

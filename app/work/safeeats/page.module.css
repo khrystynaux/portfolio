@@ -22,17 +22,25 @@
 
 /* ── Hero ─────────────────────────────────────────────────────────────────── */
 .hero {
-  background: #182620;
-  padding: 48px 0 52px;
+  background: var(--color-accent-label);
+}
+
+.heroTitleBarInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .heroNameplate {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--space-8);
+  padding: 16px var(--space-8) 52px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 10px;
 }
 
 .heroPill {
@@ -41,20 +49,12 @@
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
-  color: rgba(246, 245, 227, 0.88);
-  background: rgba(24, 38, 32, 0.55);
-  border: 1px solid rgba(246, 245, 227, 0.22);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  color: #f6f5e3;
+  background: rgba(246, 245, 227, 0.16);
+  border: 1px solid rgba(246, 245, 227, 0.32);
   padding: 4px 12px;
   border-radius: var(--radius-sm);
   width: fit-content;
-}
-
-.heroContent {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 }
 
 .heroTitle {
@@ -66,12 +66,18 @@
   color: #f6f5e3;
 }
 
+.heroSubGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .heroSub {
   font-family: var(--font-body);
   font-size: 17px;
   font-weight: 400;
   line-height: 1.65;
-  color: rgba(246, 245, 227, 0.72);
+  color: rgba(246, 245, 227, 0.92);
   max-width: 60ch;
 }
 
@@ -79,7 +85,7 @@
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 400;
-  color: rgba(246, 245, 227, 0.45);
+  color: rgba(246, 245, 227, 0.9);
 }
 
 /* ── Section backgrounds ──────────────────────────────────────────────────── */
@@ -367,7 +373,7 @@
 
 /* ── Problem Statement ────────────────────────────────────────────────────── */
 .problemSection {
-  background: #6c9362;
+  background: var(--color-accent-label);
   padding: var(--space-24) 0;
 }
 
@@ -552,7 +558,7 @@
   justify-content: space-between;
 }
 
-.caseNavLink {
+.caseNavBack {
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -561,7 +567,37 @@
   transition: color 0.2s;
 }
 
-.caseNavLink:hover {
+.caseNavBack:hover {
+  color: var(--color-bg);
+}
+
+.caseNavNext {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: none;
+  gap: var(--space-1);
+  transition: opacity 0.2s;
+}
+
+.caseNavNext:hover {
+  opacity: 0.75;
+}
+
+.caseNavDir {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(246, 245, 227, 0.7);
+}
+
+.caseNavTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  letter-spacing: -0.02em;
   color: var(--color-bg);
 }
 
@@ -572,13 +608,6 @@
 
 /* ── Mobile ───────────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .heroNameplate {
-    left: 24px;
-    right: 24px;
-    width: auto;
-    top: 240px;
-  }
-
   .heroTitle {
     font-size: clamp(32px, 5vw, 56px);
   }
@@ -589,15 +618,12 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    height: auto;
-    min-height: 520px;
+  .heroTitleBarInner {
+    padding: 28px var(--space-4) 0;
   }
 
   .heroNameplate {
-    top: 180px;
-    left: 16px;
-    right: 16px;
+    padding: 12px var(--space-4) 40px;
   }
 
   .heroTitle {

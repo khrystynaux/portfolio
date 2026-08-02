@@ -68,19 +68,18 @@ export default function AiWorkflowContent() {
 
         {/* ── 01 Hero ───────────────────────────────────────────────────────── */}
         <section className={styles.hero}>
-          <motion.div
-            className={styles.heroContent}
-            variants={wakeUpContainer}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.span className={styles.heroPill} variants={fadeUp}>
-              AI · Process Design
-            </motion.span>
-            <div className={styles.heroTextGroup}>
-              <motion.h1 className={styles.heroTitle} variants={fadeUp}>
-                Creating More Space for UX Thinking Using AI
-              </motion.h1>
+          <motion.div variants={wakeUpContainer} initial="hidden" animate="visible">
+            <div className={styles.heroTitleBar}>
+              <div className={styles.heroTitleBarInner}>
+                <motion.span className={styles.heroPill} variants={fadeUp}>
+                  AI · Process Design
+                </motion.span>
+                <motion.h1 className={styles.heroTitle} variants={fadeUp}>
+                  Creating More UX Space with AI
+                </motion.h1>
+              </div>
+            </div>
+            <div className={styles.heroContent}>
               <motion.div variants={fadeUp}>
                 <p className={styles.heroSub}>
                   How I turned scattered AI experiments into a design methodology
@@ -159,8 +158,8 @@ export default function AiWorkflowContent() {
             </h2>
             <p className={styles.bodyText}>From trial and error, a new design process has emerged.</p>
             <div className={styles.phaseStack}>
-              {phases.map((phase) => (
-                <motion.div key={phase.num} className={styles.phaseCard} {...inView(0.05)}>
+              {phases.map((phase, i) => (
+                <motion.div key={phase.num} className={styles.phaseCard} {...inView(0.05 + i * 0.06)}>
                   <div className={styles.phaseNum}>{phase.num}</div>
                   <div className={styles.phaseBody}>
                     <h3 className={styles.phaseTitle}>{phase.title}</h3>

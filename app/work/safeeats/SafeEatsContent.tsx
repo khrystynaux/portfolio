@@ -22,26 +22,27 @@ export default function SafeEatsContent() {
 
         {/* ── 01 Hero ───────────────────────────────────────────────────────── */}
         <section className={styles.hero}>
-          <motion.div
-            className={styles.heroNameplate}
-            variants={wakeUpContainer}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.span className={styles.heroPill} variants={fadeUp}>
-              Consumer · User Research
-            </motion.span>
-            <div className={styles.heroContent}>
-              <motion.h1 className={styles.heroTitle} variants={fadeUp}>
-                User Awareness Where It Matters the Most
-              </motion.h1>
-              <motion.p className={styles.heroSub} variants={fadeUp}>
-                A responsive food recall platform built on user research and
-                iterative testing.
-              </motion.p>
-              <motion.p className={styles.heroMeta} variants={fadeUp}>
-                case study completed in 2024
-              </motion.p>
+          <motion.div variants={wakeUpContainer} initial="hidden" animate="visible">
+            <div className={styles.heroTitleBar}>
+              <div className={styles.heroTitleBarInner}>
+                <motion.span className={styles.heroPill} variants={fadeUp}>
+                  Consumer · User Research
+                </motion.span>
+                <motion.h1 className={styles.heroTitle} variants={fadeUp}>
+                  Awareness Where It Matters Most
+                </motion.h1>
+              </div>
+            </div>
+            <div className={styles.heroNameplate}>
+              <motion.div className={styles.heroSubGroup} variants={fadeUp}>
+                <p className={styles.heroSub}>
+                  A responsive food recall platform built on user research and
+                  iterative testing.
+                </p>
+                <p className={styles.heroMeta}>
+                  case study completed in 2024
+                </p>
+              </motion.div>
             </div>
           </motion.div>
         </section>
@@ -534,11 +535,12 @@ export default function SafeEatsContent() {
         <nav className={styles.caseNav} aria-label="Case study navigation">
           <div className={styles.container}>
             <div className={styles.caseNavInner}>
-              <Link href="/#work" className={styles.caseNavLink}>
+              <Link href="/#work" className={styles.caseNavBack}>
                 ← All Work
               </Link>
-              <Link href="/work/ai-search" className={styles.caseNavLink}>
-                Complex Search Made Easy →
+              <Link href="/work/ai-workflow" className={styles.caseNavNext}>
+                <span className={styles.caseNavDir}>Next case study</span>
+                <span className={styles.caseNavTitle}>Creating More UX Space with AI →</span>
               </Link>
             </div>
           </div>
