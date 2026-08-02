@@ -25,7 +25,7 @@ export default function CaseStudyCard({ study, index }: Props) {
         <img
           src={study.thumbnail}
           alt=""
-          className={styles.bgImage}
+          className={`${styles.bgImage}${study.thumbnailContain ? ` ${styles.containRight}` : ""}`}
           aria-hidden="true"
           loading="lazy"
         />

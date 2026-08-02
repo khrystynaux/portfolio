@@ -32,6 +32,13 @@
   transform: scale(1.04);
 }
 
+/* Shows the thumbnail uncropped instead of filling/cropping the card — the
+   empty left space is covered by .overlay below, forming a plain dark panel. */
+.containRight {
+  object-fit: contain;
+  object-position: right center;
+}
+
 /* Gradient overlay — left dark zone protects text, fades toward mockup */
 .overlay {
   position: absolute;
@@ -43,6 +50,7 @@
   z-index: 1;
   pointer-events: none;
 }
+
 
 /* Category tag — top left */
 .category {

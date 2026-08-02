@@ -8,6 +8,8 @@ export interface CaseStudy {
   status: "published" | "in-progress";
   bgColor: string;
   thumbnail?: string;
+  /** Show the thumbnail uncropped, anchored right, instead of filling/cropping the card. */
+  thumbnailContain?: boolean;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -21,6 +23,7 @@ export const caseStudies: CaseStudy[] = [
     status: "published",
     bgColor: "#1a1929",
     thumbnail: "/images/ai-workflow-thumb.png",
+    thumbnailContain: true,
   },
   {
     id: "ai-search",
