@@ -1,0 +1,20 @@
+.section {
+  padding: var(--space-20) 0 var(--space-24);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) 0 var(--space-16);
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+}

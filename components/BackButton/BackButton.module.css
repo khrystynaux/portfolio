@@ -40,3 +40,15 @@
 .label {
   line-height: 1;
 }
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    top: max(var(--space-4), env(safe-area-inset-top));
+    left: var(--space-4);
+  }
+}

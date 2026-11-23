@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import BackButton from "@/components/BackButton/BackButton";
+import { MACHINE_HREF } from "@/lib/routes";
 import styles from "./page.module.css";
 import { wakeUpContainer, fadeUp } from "@/lib/animation";
 
@@ -477,8 +478,8 @@ export default function AiSearchContent() {
         <nav className={styles.caseNav} aria-label="Case study navigation">
           <div className={styles.container}>
             <div className={styles.caseNavInner}>
-              <Link href="/#work" className={styles.caseNavBack}>
-                ← All work
+              <Link href={MACHINE_HREF} className={styles.caseNavBack}>
+                ← Back to the machine
               </Link>
               <Link href="/work/safeeats" className={styles.caseNavNext}>
                 <span className={styles.caseNavDir}>Next case study</span>

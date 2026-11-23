@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import BackButton from "@/components/BackButton/BackButton";
+import { MACHINE_HREF } from "@/lib/routes";
 import styles from "./page.module.css";
 import { wakeUpContainer, fadeUp } from "@/lib/animation";
 
@@ -54,10 +55,10 @@ const phases = [
 ];
 
 const outcomes = [
-  "Research synthesis went from days to hours",
-  "Multiple solution variations tested per sprint — instead of one",
-  "Technical constraints surfaced before high-fidelity design, not after",
-  "Every design reviewed against a consistent standard, even under deadline pressure",
+  "Research synthesis went from days to hours.",
+  "Multiple solution variations tested per sprint — instead of one.",
+  "Technical constraints surfaced before high-fidelity design, not after.",
+  "Every design reviewed against a consistent standard, even under deadline pressure.",
 ];
 
 export default function AiWorkflowContent() {
@@ -215,8 +216,8 @@ export default function AiWorkflowContent() {
         <nav className={styles.caseNav} aria-label="Case study navigation">
           <div className={styles.container}>
             <div className={styles.caseNavInner}>
-              <Link href="/#work" className={styles.caseNavBack}>
-                ← All work
+              <Link href={MACHINE_HREF} className={styles.caseNavBack}>
+                ← Back to the machine
               </Link>
               <Link href="/work/ai-search" className={styles.caseNavNext}>
                 <span className={styles.caseNavDir}>Next case study</span>
