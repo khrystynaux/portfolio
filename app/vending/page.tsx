@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
-import VendingExperience from "@/components/VendingMachine/VendingExperience";
+import { permanentRedirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Khrystyna Arnoldy — UX/Product Designer",
-};
-
+/** The machine previewed here before it became the homepage; keep old links working. */
 export default function VendingPage() {
-  return <VendingExperience />;
+  permanentRedirect("/");
 }
