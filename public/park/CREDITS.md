@@ -7,7 +7,6 @@ All assets in this folder are from [Poly Haven](https://polyhaven.com) and relea
 |---|---|
 | chinese_garden_1k.hdr, chinese_garden_4k.jpg | https://polyhaven.com/a/chinese_garden |
 | pond_bridge_night_1k.hdr, pond_bridge_night_4k.jpg | https://polyhaven.com/a/pond_bridge_night |
-| models/modular_street_seating | https://polyhaven.com/a/modular_street_seating |
 | models/street_lamp_01 | https://polyhaven.com/a/street_lamp_01 |
 | models/shrub_02 | https://polyhaven.com/a/shrub_02 |
 | models/grass_medium_01 | https://polyhaven.com/a/grass_medium_01 |
